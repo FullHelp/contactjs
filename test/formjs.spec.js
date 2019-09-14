@@ -70,7 +70,7 @@ describe ('formjs.js', () => {
     it ('automatically discovers form by their id', () => {
         const formElement = document.createElement('form');
 
-        formElement.setAttribute('id', 'formjs')
+        formElement.setAttribute('id', 'fh-contactjs')
 
         document.body.appendChild(formElement)
 

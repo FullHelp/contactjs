@@ -44,7 +44,7 @@ const Formjs = class {
             return;
         }
 
-        this.options.form = document.getElementById('formjs');
+        this.options.form = document.getElementById('fh-contactjs');
     }
     
     /**
