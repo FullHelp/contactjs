@@ -2,7 +2,7 @@ const Events = require('./events');
 const axios = require('axios');
 const uuid = require('uuid');
 
-const Formjs = class {
+const ContactJs = class {
 
     /**
      * Create a new instance.
@@ -192,4 +192,4 @@ function handleError (error) {
     }
 }
 
-module.exports = Formjs;
+module.exports = ContactJs;

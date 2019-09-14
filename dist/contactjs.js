@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["Formjs"] = factory();
+		exports["FullHelp"] = factory();
 	else
-		root["Formjs"] = factory();
+		root["FullHelp"] = factory();
 })(window, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -1012,7 +1012,9 @@ module.exports = bytesToUuid;
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(12);
+module.exports = {
+    ContactJs: __webpack_require__(12)
+};
 
 /***/ }),
 /* 12 */
@@ -1022,7 +1024,7 @@ const Events = __webpack_require__(13);
 const axios = __webpack_require__(14);
 const uuid = __webpack_require__(31);
 
-const Formjs = class {
+const ContactJs = class {
 
     /**
      * Create a new instance.
@@ -1064,7 +1066,7 @@ const Formjs = class {
             return;
         }
 
-        this.options.form = document.getElementById('formjs');
+        this.options.form = document.getElementById('fh-contactjs');
     }
     
     /**
@@ -1212,7 +1214,7 @@ function handleError (error) {
     }
 }
 
-module.exports = Formjs;
+module.exports = ContactJs;
 
 /***/ }),
 /* 13 */
@@ -2219,4 +2221,4 @@ module.exports = v4;
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=formjs.map
+//# sourceMappingURL=contactjs.map

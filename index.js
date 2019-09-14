@@ -1,1 +1,3 @@
-module.exports = require('./src/formjs');
+module.exports = {
+    ContactJs: require('./src/contactjs')
+};

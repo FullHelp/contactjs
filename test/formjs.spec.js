@@ -1,15 +1,15 @@
-const Formjs = require("../src/formjs");
+const ContactJs = require("../src/contactjs");
 const expect = require('expect');
 const sinon = require('sinon');
 const Axios = require("axios");
 const uuidv4 = require('uuid/v4');
 
-describe ('formjs.js', () => {
+describe ('contactjs.js', () => {
 
     it ('has default options', () => {
-        const formjs = new Formjs();
+        const contactjs = new ContactJs();
 
-        expect(formjs.options).toEqual({
+        expect(contactjs.options).toEqual({
             account: null,
             form: null,
             host: null,
@@ -62,9 +62,9 @@ describe ('formjs.js', () => {
             }
         };
 
-        const formjs = new Formjs(options);
+        const contactjs = new ContactJs(options);
 
-        expect(formjs.options).toEqual(options);
+        expect(contactjs.options).toEqual(options);
     })
 
     it ('automatically discovers form by their id', () => {
@@ -74,9 +74,9 @@ describe ('formjs.js', () => {
 
         document.body.appendChild(formElement)
 
-        const formjs = new Formjs()
+        const contactjs = new ContactJs()
 
-        expect(formjs.options.form).toEqual(formElement)
+        expect(contactjs.options.form).toEqual(formElement)
     })
 
     it ('automatically discovers mandatory fields by their ids', () => {
@@ -99,15 +99,15 @@ describe ('formjs.js', () => {
         formElement.appendChild(subjectInputElement)
         formElement.appendChild(messageInputElement)
 
-        const formjs = new Formjs({
+        const contactjs = new ContactJs({
             form: formElement
         });
 
-        expect(formjs.options.fields.firstName).toEqual(firstNameInputElement)
-        expect(formjs.options.fields.lastName).toEqual(lastNameInputElement)
-        expect(formjs.options.fields.email).toEqual(emailInputElement)
-        expect(formjs.options.fields.subject).toEqual(subjectInputElement)
-        expect(formjs.options.fields.message).toEqual(messageInputElement)
+        expect(contactjs.options.fields.firstName).toEqual(firstNameInputElement)
+        expect(contactjs.options.fields.lastName).toEqual(lastNameInputElement)
+        expect(contactjs.options.fields.email).toEqual(emailInputElement)
+        expect(contactjs.options.fields.subject).toEqual(subjectInputElement)
+        expect(contactjs.options.fields.message).toEqual(messageInputElement)
     })
 
     it ('sends the data on form submission', () => {
@@ -143,7 +143,7 @@ describe ('formjs.js', () => {
         formElement.appendChild(subjectInputElement)
         formElement.appendChild(messageInputElement)
 
-        const formjs = new Formjs({
+        const contactjs = new ContactJs({
             account: 123,
             form: formElement,
             host: 'http://www.example.org/',
@@ -236,7 +236,7 @@ describe ('formjs.js', () => {
         formElement.appendChild(emailInputError)
         formElement.appendChild(messageInputError)
 
-        const formjs = new Formjs({
+        const contactjs = new ContactJs({
             form: formElement
         });
 
@@ -292,11 +292,11 @@ describe ('formjs.js', () => {
         formElement.appendChild(subjectInputElement)
         formElement.appendChild(messageInputElement)
 
-        const formjs = new Formjs({
+        const contactjs = new ContactJs({
             form: formElement,
         });
 
-        formjs.clearForm();
+        contactjs.clearForm();
 
         expect(firstNameInputElement.value).toEqual('')
         expect(lastNameInputElement.value).toEqual('')
