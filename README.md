@@ -66,7 +66,7 @@ Easily create contact forms and integrate them with your Full Help's help desk s
         var ContactJs = new FullHelp.ContactJs({
             account: 6, // the ID of your Full Help instance account
             host: 'http://www.myhelpdesk.com/', // your Full Help's domain instance
-            source: 'Form @ ' + window.location.host // Conversation source, e.g., "Form @ www.myhelpdesk.com"
+            source: 'Form @ ' + window.location.host // Conversation source, e.g., "Form @ www.mywebsite.com"
         });
     })();
 </script>
