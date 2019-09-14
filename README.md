@@ -15,6 +15,7 @@ Easily create contact forms and integrate them with your Full Help's help desk s
 
 ```html
 <form id="fh-contactjs">
+    <!-- Success message -->
     <div class="alert alert-success alert-dismissible" id="sent-alert" role="alert" style="display: none;">
         <span class="message">We have received your message!</span>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -22,30 +23,35 @@ Easily create contact forms and integrate them with your Full Help's help desk s
         </button>
     </div>
 
+    <!-- User's first name (optional) -->
     <div class="form-group">
         <label>First name</label>
         <input type="text" name="first-name" id="first-name" class="form-control">
         <small id="first-name-field-error" class="form-text text-danger"></small>
     </div>
     
+    <!-- User's last name (optional) -->
     <div class="form-group">
         <label>Last name</label>
         <input type="text" name="last-name" id="last-name" class="form-control">
         <small id="last-name-field-error" class="form-text text-danger"></small>
     </div>
 
+    <!-- User's email address (required) -->
     <div class="form-group">
         <label>Email</label>
         <input type="email" name="email" id="email" class="form-control" required>
         <small id="email-field-error" class="form-text text-danger"></small>
     </div>
     
+    <!-- Conversation subject (optional) -->
     <div class="form-group">
         <label>Subject</label>
         <input type="text" name="subject" id="subject" class="form-control">
         <small id="subject-field-error" class="form-text text-danger"></small>
     </div>
     
+    <!-- Conversation message (required) -->
     <div class="form-group">
         <label>Message</label>
         <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
