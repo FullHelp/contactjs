@@ -4,6 +4,13 @@ Easily create contact forms and integrate them with your Full Help's help desk s
 
 [See example contact form](https://htmlpreview.github.io/?https://github.com/FullHelp/contactjs/blob/master/examples/contact.html)
 
+## Features
+
+- Quick integration with [Full Help](https://www.fullhelp.com/) using the [Restful API](https://developers.fullhelp.com/)
+- Handles field validations
+- Events — perfect for showing custom success/error messages
+- Flexibility — create and style your form however you want
+
 ## TL;DR
 
 ```html
