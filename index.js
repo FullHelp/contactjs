@@ -1,3 +1,1 @@
-module.exports = {
-    ContactJs: require('./src/contactjs')
-};
+module.exports = require('./src/contactjs');

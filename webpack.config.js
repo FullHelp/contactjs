@@ -10,7 +10,7 @@ function generateConfig(name) {
             path: path.resolve(__dirname, 'dist'),
             filename: name + '.js',
             sourceMapFilename: name + '.map',
-            library: 'FullHelp',
+            library: ['FullHelp', 'ContactJs'],
             libraryTarget: 'umd'
         },
         node: {
@@ -26,7 +26,7 @@ function generateConfig(name) {
     return config;
 }
 
-['contactjs', 'contactjs.min'].forEach(function (key) {
+['FullHelp.ContactJs', 'FullHelp.ContactJs.min'].forEach(function (key) {
     config[key] = generateConfig(key);
 });
 

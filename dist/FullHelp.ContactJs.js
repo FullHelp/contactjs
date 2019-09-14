@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["FullHelp"] = factory();
+		exports["ContactJs"] = factory();
 	else
-		root["FullHelp"] = factory();
+		root["FullHelp"] = root["FullHelp"] || {}, root["FullHelp"]["ContactJs"] = factory();
 })(window, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -1012,9 +1012,7 @@ module.exports = bytesToUuid;
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {
-    ContactJs: __webpack_require__(12)
-};
+module.exports = __webpack_require__(12);
 
 /***/ }),
 /* 12 */
@@ -2221,4 +2219,4 @@ module.exports = v4;
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=contactjs.map
+//# sourceMappingURL=FullHelp.ContactJs.map
